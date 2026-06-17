@@ -1,0 +1,303 @@
+/* ================================
+   VARIABEL WARNA (crayon kita)
+================================ */
+:root {
+  --navy:  #0f1c2e;
+  --biru:  #3b82f6;
+  --hijau: #10b981;
+  --abu:   #6b7280;
+  --putih: #ffffff;
+}
+
+/* ================================
+   BODY (seluruh halaman)
+================================ */
+body {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+/* ================================
+   HEADER
+================================ */
+.header {
+  background-color: var(--navy);
+  color: var(--putih);
+  padding: 24px;
+  border-radius: 12px 12px 0 0;
+}
+
+.header h1 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+/* ================================
+   DASHBOARD (kotak statistik)
+================================ */
+.dashboard {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-box {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #d1d5db;
+}
+
+/* ================================
+   CONTROLS (search & tombol)
+================================ */
+.controls {
+  background-color: #fafafa;
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.controls input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.controls button {
+  background-color: var(--biru);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================================
+   DAFTAR KOSAKATA
+================================ */
+#vocabList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ko-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.id-text {
+  font-size: 0.95rem;
+  color: var(--abu);
+  margin-top: 4px;
+}
+
+.btn-hafal {
+  background-color: var(--hijau);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+/* ================================
+   TAMPILAN KUIS
+================================ */
+#kuisContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+}
+
+.kuis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.kuis-header button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.kuis-soal {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0f1c2e;
+  margin-bottom: 40px;
+}
+
+.kuis-pilihan {
+  display: grid;
+  gap: 12px;
+}
+
+.btn-pilihan {
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+}
+
+.btn-pilihan:hover {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.btn-pilihan.benar {
+  background-color: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.btn-pilihan.salah {
+  background-color: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.kuis-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.kuis-footer button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+/* ================================
+   SEMBUNYIKAN ARTI
+================================ */
+.item-klik {
+  cursor: pointer;
+  flex-grow: 1;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.item-klik:hover .ko-text {
+  color: #3b82f6;
+}
+
+.id-text.tersembunyi {
+  color: #3b82f6;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+/* ================================
+   TOMBOL AUDIO & ACTIONS
+================================ */
+.item-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.btn-audio {
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-audio:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+/* ================================
+   STATUS WARNA LIST ITEM
+================================ */
+.status-hafal {
+  border-left: 4px solid #10b981;
+}
+
+.status-susah {
+  border-left: 4px solid #f59e0b;
+}
+
+.status-belum {
+  border-left: 4px solid transparent;
+}
+
+.btn-susah {
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-susah:hover {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+/* ================================
+   DROPDOWN FILTER
+================================ */
+#filterSelect {
+  padding: 10px;
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: white;
+}

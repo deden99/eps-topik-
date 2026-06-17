@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Kosakata</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- BAGIAN 1: Header (judul & statistik) -->
+  <div class="header">
+    <h1>📚DEDEN eps topik bab 1</h1>
+
+    <div class="dashboard">
+      <div class="stat-box">
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-label">Total</div>
+      </div>
+      <div class="stat-box">
+  <div class="stat-value" id="stat-hafal">0</div>
+  <div class="stat-label">Hafal</div>
+</div>
+<div class="stat-box">
+  <div class="stat-value" id="stat-susah">0</div>
+  <div class="stat-label">Susah</div>
+</div>
+<div class="stat-box">
+  <div class="stat-value" id="stat-belum">0</div>
+  <div class="stat-label">Belum</div>
+</div>
+    </div>
+  </div>
+
+  <!-- BAGIAN 2: Tombol & Search -->
+  <div class="controls">
+  <select id="babSelect">
+    <option value="bab1">kata kerja & kata sifat</option>
+    <option value="bab2">kata Tempat & kata Benda</option>
+    <option value="bab3">Bab 3: Waktu</option>
+  </select>
+</div>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="🔍 Cari kata...">
+  <select id="filterSelect">
+    <option value="all">Semua Status</option>
+    <option value="belum">Belum Hafal</option>
+    <option value="susah">Susah</option>
+    <option value="hafal">Sudah Hafal</option>
+  </select>
+  <button onclick="toggleQuiz()">🎮 Mulai Kuis</button>
+</div>
+
+  <!-- BAGIAN 3: Daftar Kosakata -->
+  <ul id="vocabList">
+    <!-- Nanti diisi otomatis oleh JavaScript -->
+  </ul>
+  <!-- BAGIAN 4: Tampilan Kuis -->
+  <div id="kuisContainer" style="display:none;">
+
+    <div class="kuis-header">
+      <span id="kuisSkor">Skor: 0</span>
+      <button onclick="toggleQuiz()">✖ Keluar Kuis</button>
+    </div>
+
+    <div class="kuis-soal" id="kuisSoal">
+      단어
+    </div>
+
+    <div class="kuis-pilihan" id="kuisPilihan">
+      <!-- Diisi JavaScript -->
+    </div>
+
+    <div class="kuis-footer">
+      <button 
+        id="btnLanjut" 
+        style="display:none;"
+        onclick="soalBerikutnya()">
+        Soal Berikutnya ➔
+      </button>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
